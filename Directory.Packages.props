@@ -15,7 +15,7 @@
         <PackageVersion Include="LibGit2Sharp" Version="0.27.0-preview-0102" />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(TargetFramework)' != 'net6.0'">
+    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0' Or '$(TargetFramework)' == 'netcoreapp3.1'">
         <PackageVersion Include="Microsoft.Build" Version="16.9.0" />
         <PackageVersion Include="Microsoft.Win32.Registry" Version="5.0.0" />
         <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
@@ -25,6 +25,12 @@
         <PackageVersion Include="Microsoft.Build" Version="17.0.0" />
         <PackageVersion Include="Microsoft.Win32.Registry" Version="6.0.0-preview.5.21301.5" />
         <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+        <PackageVersion Include="Microsoft.Build" Version="17.0.0" />
+        <PackageVersion Include="Microsoft.Win32.Registry" Version="6.0.0-preview.5.21301.5" />
+        <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0-preview.1.22076.8" />
     </ItemGroup>
 
 </Project>
